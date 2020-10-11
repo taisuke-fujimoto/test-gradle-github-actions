@@ -1,0 +1,10 @@
+build/
+.gradle
+
+.idea/*
+!.idea/codeStyles
+!.idea/inspectionProfiles
+!.idea/.gitignore
+!.idea/gradle.xml
+!.idea/jarRepositories.xml
+!.idea/misc.xml
