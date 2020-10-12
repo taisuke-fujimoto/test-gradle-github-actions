@@ -22,10 +22,9 @@ jobs:
             ${{ runner.os }}-gradle-
       - name: Run Tests
         run: ./gradlew test
-        continue-on-error: true
       - name: Publish Test Report
+        if: always()
         uses: scacap/action-surefire-report@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           report_paths: '**/build/test-results/test/TEST-*.xml'
-        continue-on-error: false
