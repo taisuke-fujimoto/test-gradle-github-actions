@@ -22,6 +22,7 @@ jobs:
             ${{ runner.os }}-gradle-
       - name: Run Tests
         run: ./gradlew test
+        continue-on-error: true
       - name: Publish Test Report
         uses: scacap/action-surefire-report@v1
         with:
